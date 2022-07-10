@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Parcel Price Check!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  </head>
+  <body>
+    <form action="/parcels" method="post">
+      <label for="width">Width:</label>
+      <input id="width" name="width" type="number" required min=1>
+      <br>
+      <label for="height">Height:</label>
+      <input id="height" name="height" type="number" required min=1>
+      <br>
+      <label for="length">Length:</label>
+      <input id="length" name="length" type="number" required min=1>
+      <br>
+      <label for="weight">Weight:</label>
+      <input id="weight" name="weight" type="number" required min=1>
+      <br>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
