@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using ToDoList.Models;
+using ParcelCheck.Models;
 using System.Collections.Generic;
 
 namespace ParcelCheck.Controllers
@@ -21,10 +21,17 @@ namespace ParcelCheck.Controllers
     }
 
     [HttpPost("/parcels")]
-    public ActionResult Create(string dimensions)
+    public ActionResult Create(int width, int height, int length, int weight)
     {
-      Parcel myParcel = new Parcel(dimensions);
+      Parcel myParcel = new Parcel(width, height, length, weight);
       return RedirectToAction("Index");
+    }
+
+    [HttpPost("/parcels/delete")]
+    public ActionResult DeleteAll()
+    {
+      Parcel.ClearAll();
+      return View();
     }
 
   }
